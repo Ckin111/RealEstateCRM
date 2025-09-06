@@ -32,7 +32,7 @@ variable "app_root" {
 variable "branch_name" {
   type        = string
   description = "AWS Amplify App Repo Branch Name"
-  default     = "main"
+  default     = "prod"
 }
 
 variable "admin_policy" {

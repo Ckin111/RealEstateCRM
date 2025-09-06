@@ -63,7 +63,7 @@ resource "aws_amplify_app" "amplify_app" {
   }
 }
 
-resource "aws_amplify_branch" "main_branch" {
+resource "aws_amplify_branch" "prod_branch" {
   app_id      = aws_amplify_app.amplify_app.id
   branch_name = var.branch_name
 
@@ -75,7 +75,7 @@ resource "aws_amplify_branch" "main_branch" {
 }
 
 resource "null_resource" "trigger_amplify_deployment" {
-  depends_on = [aws_amplify_branch.main_branch]
+  depends_on = [aws_amplify_branch.prod_branch]
 
   # Force this command to be triggered every time this terraform file is ran
   triggers = {
@@ -84,10 +84,10 @@ resource "null_resource" "trigger_amplify_deployment" {
 
   # The command to be ran
   provisioner "local-exec" {
-    command = "aws amplify start-job --app-id ${aws_amplify_app.amplify_app.id} --branch-name ${aws_amplify_branch.main_branch.branch_name} --job-type RELEASE"
+    command = "aws amplify start-job --app-id ${aws_amplify_app.amplify_app.id} --branch-name ${aws_amplify_branch.prod_branch.branch_name} --job-type RELEASE"
   }
 }
 
-output "invoke_ui" {
-  value = "https://${aws_amplify_app.amplify_app.default_domain}"
+output "prod_branch_deployment" {
+  value = "https://${aws_amplify_branch.prod_branch.branch_name}.${aws_amplify_app.amplify_app.default_domain}"
 }
