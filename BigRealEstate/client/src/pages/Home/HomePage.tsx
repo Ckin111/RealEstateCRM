@@ -13,7 +13,7 @@ export const HomePage = () => {
         <p className="text-6xl font-bold text-center">
           Welcome to team
           <br />
-          <p className="text-9xl inline">Big</p> Real Estate
+          <span className="text-9xl inline">Big</span> Real Estate
         </p>
 
         <div className="absolute w-full h-full top-0 left-0 flex items-end justify-center">

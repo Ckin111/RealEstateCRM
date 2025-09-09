@@ -30,7 +30,7 @@ export const AppHeader = () => {
     <div className="w-full flex flex-row items-center justify-between p-4">
       <div>
         <p className="text-2xl font-bold cursor-pointer">
-          <p className="text-4xl inline">Big</p> Real Estate
+          <span className="text-4xl inline">Big</span> Real Estate
         </p>
       </div>
 
