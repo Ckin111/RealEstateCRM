@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
 // Configuration - Edit this to add new weeks and items
@@ -103,7 +103,7 @@ const FourUpItem = ({ item, index, type }: { item: any, index: number, type: str
 const FourUpSection = ({ title, items, type }: { title: string, items: any[], type: string }) => {
   return (
     <div className="bg-slate-700 rounded-lg p-4 flex-1">
-      <h3 className="text-white font-semibold text-lg mb-4">{title}</h3>
+      <h3 className="text-white font-bold text-2xl mb-4">{title}</h3>
       {items.map((item, index) => (
         <FourUpItem 
           key={index} 
