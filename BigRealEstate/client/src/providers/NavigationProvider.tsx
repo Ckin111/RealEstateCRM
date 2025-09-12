@@ -1,5 +1,5 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router";
-import { HomePage, NotFoundPage, FourUp } from "../pages";
+import { HomePage, NotFoundPage, FourUp, Hours } from "../pages";
 import { AppLayout } from "../layouts";
 
 export const NavigationProvider = () => {
@@ -11,6 +11,7 @@ export const NavigationProvider = () => {
 
           <Route path="/home" element={<HomePage />} />
           <Route path="/fourup" element={<FourUp />} />
+          <Route path="/hours" element={<Hours />} />
 
           <Route path="/*" element={<NotFoundPage />} />
         </Route>

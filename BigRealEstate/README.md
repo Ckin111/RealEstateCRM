@@ -51,8 +51,9 @@ If you prefer, you can skip the EC2 setup and run everything directly from your 
 
 ## Option 3: Deploy with GitHub Pages
 
-npm run build
-npm run deploy
+1. npm run build
+
+2. npm run deploy
 
 
 ## Installation Steps

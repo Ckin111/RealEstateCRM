@@ -5,7 +5,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 const FOURUPS_DATA = [
   {
     id: 4,
-    dateRange: "10/31/25 - 11/07/25", // Fixed date range - was backwards
+    dateRange: "10/31/25 - 11/07/25", 
     progress: [
       { text: "The progress of this week is that we have completed a figma file and talked with our sponsor", assignee: "Andrew" },
       { text: "The progress of this week is that we have completed a figma file and talked with our sponsor", assignee: "Robert" }
