@@ -17,8 +17,8 @@ export const AppHeader = () => {
       link: "/project",
     },
     {
-      title: "Artifacts",
-      link: "/artifacts",
+      title: "4-Up",
+      link: "/FourUp",
     },
     {
       title: "Hours",
