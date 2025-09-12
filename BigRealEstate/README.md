@@ -49,6 +49,12 @@ If you prefer, you can skip the EC2 setup and run everything directly from your 
 
 ---
 
+## Option 3: Deploy with GitHub Pages
+
+npm run build
+npm run deploy
+
+
 ## Installation Steps
 
 1. Navigate to the Terraform Directory  
