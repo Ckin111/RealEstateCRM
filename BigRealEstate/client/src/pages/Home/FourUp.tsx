@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
 // Configuration - Edit this to add new weeks and items
 const FOURUPS_DATA = [
   {
     id: 4,
-    dateRange: "10/01/25 - 10/07/25",
+    dateRange: "10/31/25 - 11/07/25", // Fixed date range - was backwards
     progress: [
       { text: "The progress of this week is that we have completed a figma file and talked with our sponsor", assignee: "Andrew" },
       { text: "The progress of this week is that we have completed a figma file and talked with our sponsor", assignee: "Robert" }
@@ -86,7 +86,7 @@ const FOURUPS_DATA = [
 ];
 
 // Component for individual items
-const FourUpItem = ({ item, index, type }) => {
+const FourUpItem = ({ item, index, type }: { item: any, index: number, type: string }) => {
   return (
     <div className="flex items-start gap-3 mb-3">
       <div className="text-white font-medium min-w-16">
@@ -100,7 +100,7 @@ const FourUpItem = ({ item, index, type }) => {
 };
 
 // Component for each section (Progress, Plans, Needs, Risks)
-const FourUpSection = ({ title, items, type }) => {
+const FourUpSection = ({ title, items, type }: { title: string, items: any[], type: string }) => {
   return (
     <div className="bg-slate-700 rounded-lg p-4 flex-1">
       <h3 className="text-white font-semibold text-lg mb-4">{title}</h3>
@@ -117,7 +117,7 @@ const FourUpSection = ({ title, items, type }) => {
 };
 
 // Component for individual week
-const WeekCard = ({ week }) => {
+const WeekCard = ({ week }: { week: any }) => {
   return (
     <div className="mb-8">
       {/* Title above the 2x2 grid */}
