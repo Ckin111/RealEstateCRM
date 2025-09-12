@@ -4,7 +4,7 @@ import { AppLayout } from "../layouts";
 
 export const NavigationProvider = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/BigRealEstate/">
       <Routes>
         <Route element={<AppLayout />}>
           <Route index element={<Navigate to={"/home"} />} />
@@ -12,7 +12,6 @@ export const NavigationProvider = () => {
           <Route path="/home" element={<HomePage />} />
           <Route path="/fourup" element={<FourUp />} />
           <Route path="/hours" element={<Hours />} />
-
           <Route path="/*" element={<NotFoundPage />} />
         </Route>
       </Routes>
